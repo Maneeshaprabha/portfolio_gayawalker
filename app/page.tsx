@@ -6,6 +6,7 @@ import Hero from './../src/components/Hero';
 import AboutMe from './../src/components/AboutMe';
 import VideoGrid from './../src/components/VideoGrid';
 import Pricing from './../src/components/Pricing';
+import Contact from './../src/components/Contact';
 
 
 
@@ -22,6 +23,7 @@ export default function Home() {
       <AboutMe />
       <VideoGrid />
       <Pricing/>
+      <Contact />
 
 
 
