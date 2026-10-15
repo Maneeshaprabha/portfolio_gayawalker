@@ -7,6 +7,7 @@ import AboutMe from './../src/components/AboutMe';
 import VideoGrid from './../src/components/VideoGrid';
 import Pricing from './../src/components/Pricing';
 import Contact from './../src/components/Contact';
+import Footer from './../src/components/Footer';
 
 
 
@@ -24,6 +25,7 @@ export default function Home() {
       <VideoGrid />
       <Pricing/>
       <Contact />
+      <Footer/>
 
 
 

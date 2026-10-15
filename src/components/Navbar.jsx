@@ -66,6 +66,13 @@ export default function Navbar() {
             Portfolio
           </Link>
           <Link 
+            href="#Packages" 
+            onClick={() => setIsOpen(false)} 
+            className="text-gray-300 text-lg hover:text-[#0BB671] transition-colors"
+          >
+            Packages
+          </Link>
+          <Link 
             href="#contact" 
             onClick={() => setIsOpen(false)} 
             className="px-8 py-3 bg-[#0BB671] text-black rounded-full hover:bg-[#16d98a] transition-colors font-bold"
