@@ -1,9 +1,35 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function Contact() {
+  // Form එකේ දත්ත රඳවා තබා ගැනීමට State
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  // Input වෙනස් වන විට State අලුත් කිරීම
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // WhatsApp හරහා පණිවිඩය යැවීම
+  const handleWhatsAppSend = (e) => {
+    e.preventDefault(); // Form එක submit වීම නතර කිරීම
+    
+    const phoneNumber = "+94771234855"; // ඔබේ WhatsApp අංකය (මෙය නිවැරදිදැයි තහවුරු කරගන්න)
+    
+    // WhatsApp සඳහා පණිවිඩය සකස් කිරීම
+    const message = `*New Inquiry from Website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Message:* ${formData.message}`;
+    
+    // WhatsApp Web හෝ App වෙත Redirect කිරීම
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section id="contact" className="py-24 bg-[#111111] px-6 lg:px-20 border-t border-zinc-900/50">
       
@@ -59,7 +85,7 @@ export default function Contact() {
 
         {/* Contact Form */}
         <div className="bg-[#1a1a1a] p-8 md:p-10 rounded-2xl border border-zinc-800">
-          <form className="space-y-6">
+          <form onSubmit={handleWhatsAppSend} className="space-y-6">
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name Field */}
@@ -67,6 +93,10 @@ export default function Contact() {
                 <label className="text-white font-semibold text-sm">Name</label>
                 <input 
                   type="text" 
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   placeholder="Your name" 
                   className="w-full bg-[#111111] border border-zinc-800 focus:border-[#0BB671] rounded-xl p-4 text-white outline-none transition-colors"
                 />
@@ -76,7 +106,11 @@ export default function Contact() {
               <div className="space-y-2">
                 <label className="text-white font-semibold text-sm">Email</label>
                 <input 
-                  type="email" 
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   placeholder="Your email" 
                   className="w-full bg-[#111111] border border-zinc-800 focus:border-[#0BB671] rounded-xl p-4 text-white outline-none transition-colors"
                 />
@@ -87,6 +121,10 @@ export default function Contact() {
             <div className="space-y-2">
               <label className="text-white font-semibold text-sm">Message</label>
               <textarea 
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
                 placeholder="Tell us about your project" 
                 rows={6}
                 className="w-full bg-[#111111] border border-zinc-800 focus:border-[#0BB671] rounded-xl p-4 text-white outline-none transition-colors resize-none"
@@ -94,7 +132,10 @@ export default function Contact() {
             </div>
 
             {/* Submit Button */}
-            <button className="w-full flex items-center justify-center space-x-2 bg-[#0BB671] text-black font-bold text-lg py-4 rounded-xl hover:bg-[#16d98a] transition-colors">
+            <button 
+              type="submit" 
+              className="w-full flex items-center justify-center space-x-2 bg-[#0BB671] text-black font-bold text-lg py-4 rounded-xl hover:bg-[#16d98a] transition-colors"
+            >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
               </svg>
