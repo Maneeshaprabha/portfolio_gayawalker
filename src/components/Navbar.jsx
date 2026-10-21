@@ -10,10 +10,10 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center px-5 py-4 md:p-6 bg-black/80 backdrop-blur-xl fixed w-full top-0 z-50 border-b border-[#0BB671]/20 shadow-lg shadow-black/50">
       
-      {/* Logo - Mobile වලදී කුඩා කර එක පේළියට ගෙන ඇත */}
-      <div className="text-xl md:text-2xl font-bold text-white tracking-wider z-50 whitespace-nowrap">
+      {/* Logo - Clickable Link to Home */}
+      <Link href="/" className="text-xl md:text-2xl font-bold text-white tracking-wider z-50 whitespace-nowrap hover:opacity-80 transition-opacity cursor-pointer">
         GAYA <span className="text-[#0BB671]">WALKER</span>
-      </div>
+      </Link>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-300">

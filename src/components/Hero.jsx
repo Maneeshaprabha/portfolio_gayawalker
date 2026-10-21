@@ -87,10 +87,10 @@ export default function Hero() {
               ))}
             </div>
             
-            {/* Review Text */}
-            <span className="text-gray-300 text-sm md:text-base font-medium">
+            
+            {/* <span className="text-gray-300 text-sm md:text-base font-medium">
               4.9 from 100+ happy clients
-            </span>
+            </span> */}
           </motion.div>
 
         </div>
