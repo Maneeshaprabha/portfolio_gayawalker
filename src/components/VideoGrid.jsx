@@ -10,7 +10,7 @@ const allWorks = [
     title: "Andriyala Boutique Hotel Diyatalawa",
     desc: "සීතල උඩරට නිවාඩුවකට හොඳම නවාතැන - A complete walkthrough.",
     category: "YouTube",
-    img: "https://images.unsplash.com/photo-1542314831-c6a4d27ce66b?w=800&q=80", 
+    img: "./YouTube_01.jpg", 
     link: "https://youtu.be/eJU2qAz7zc8?si=TjHSzfg5jKeOFViA",
   },
   {
@@ -18,7 +18,7 @@ const allWorks = [
     title: "Must-Visit Places in Ambewela",
     desc: "අඹේවෙල ගියොත් මේ තැන්වලට යන්න අමතක කරන්න එපා ",
     category: "YouTube",
-    img: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80",
+    img: "./YouTube_02.jpg",
     link: "https://www.youtube.com/watch?v=PczV17NaQX0", 
   },
   {
@@ -26,7 +26,7 @@ const allWorks = [
     title: "Boralanda to Horton Plains",
     desc: "බොරලන්ද සිට ඔහිය හරහා හෝටන්තැන්නට",
     category: "YouTube",
-    img: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&q=80",
+    img: "./YouTube_03.jpg",
     link: "https://youtu.be/0wbwAciF3IM?si=WDakcWdHA2oxZthv", 
   },
   
@@ -36,7 +36,7 @@ const allWorks = [
     title: "Exploring Welimada Beauty",
     desc: "සුද්දොත් ආදරේ කරන අපේ වැලිමඩ සොඳුරු ඉසව් ❤️🥰 මේ ඉරිදා Elite Auto Solutions EV & Hybrid Motorshow එකෙන් මුණගැහෙමු friends 🥰❤️",
     category: "Reels",
-    img: "https://images.unsplash.com/photo-1555797303-34e8574ac3d1?w=600&h=800&fit=crop",
+    img: "./Reels_01.jpg",
     link: "https://www.facebook.com/share/v/1ESa4QeJZL/?mibextid=wwXIfr",
   },
   {
@@ -44,7 +44,7 @@ const allWorks = [
     title: "Haputale to Haldummulla Scenic Route",
     desc: "හපුතලේ සිට ඉදල්ගස්හින්න හරහා හල්දුම්මුල්ල දක්වා දිවෙන අතිසුන්දර මාර්ගයේ කතාන්දරය 🥰🥰මේ රූට් එක යන ඔයාලට බොරලන්දෙ Tea Sprig Villa එක highly recommend කරන්න පුළුවන් ❤️. Tea Sprig Villa 075 180 6504",
     category: "Reels",
-    img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=800&fit=crop",
+    img: "./Reels_02.jpg",
     link: "https://www.facebook.com/share/v/1K9i8tqBVm/?mibextid=wwXIfr",
   },
   {
@@ -52,7 +52,7 @@ const allWorks = [
     title: "Tea Sprig Villa - Boralanda",
     desc: "කොළඹ පැත්තෙ ඉඳන් හපුතලේ ඇවිත් Lipton seat,Addisom bangalow ඇතුලු හපුතලේ සුන්දරත්වය බලල, බොරලන්දට ඇවිත් හපුතලේ - ඔහිය අතරමැද පිහිටල තියන බොරලන්ද නගරයේ නතරවෙලා පහුවදා ඔහිය හරහා හෝටන් තැන්න ගිහින් හෝටන් තැන්නත් බලල එහෙම්ම නුවර එළියට ගිහින් නුවරඑළියත් බලල ආපහු කොළඹ යනවනම්, බොරලන්ද නගරයේදි නතරවෙන්න හොඳම තැනක් මේක.❤️ 5 out of 5 google reviews තියන විශ්වාසදායක තැනක් මේක. Contact number -: 075 180 6504",
     category: "Reels",
-    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=800&fit=crop",
+    img: "./Reels_03.jpg",
     link: "https://www.facebook.com/share/v/19umBvpa5J/?mibextid=wwXIfr",
   },
   {
@@ -60,7 +60,7 @@ const allWorks = [
     title: "Bluefield Tea Factory Adventure",
     desc: "මෙච්චර කාලෙකට නුවරඑළියට එන සංචාරකයන්ට අත්විඳින්න නොලැබුන වෙනස්ම විදියෙ සුපිරි අත්දැකීම් ගොඩක් දැං Bluefield tea factory එකේදි අත්විඳින්න පුලුවන්. Safari tours, Zip Line experience, Tea factory visit, Tea plucking experience,High Rope Adventure ඇතුලු Adventure/Travel lovers ලට ගැලපෙන Activities ගොඩක් මෙයාල හඳුන්වලදීල තියෙනව. ඉතිං මේ නිවාඩුවට නුවරඑළියට එන වෙනස්ම අත්දැකීමක් ගන්න කැමති අය මේ Zip Line එක try කරල බලන්න.තේ වතු මැද්දෙන් කුරුල්ලෙක් වෙලා පියාඹනව වගේ feeling එකක් ගන්න පුලුවන් ",
     category: "Reels",
-    img: "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&h=800&fit=crop",
+    img: "./Reels_04.jpg",
     link: "https://www.facebook.com/share/v/1CBp4Kujda/?mibextid=wwXIfr",
   },
   {
@@ -68,7 +68,7 @@ const allWorks = [
     title: "Nuwara Eliya Travel Experience",
     desc: "නුවරඑළියෙ එන අයට මෙන්න සුපිරි experience එකක් 🥰🥰.",
     category: "Reels",
-    img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=800&fit=crop",
+    img: "./Reels_05.jpg",
     link: "https://www.facebook.com/share/v/1d8eAzq3g1/?mibextid=wwXIfr",
   }
 ];

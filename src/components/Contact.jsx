@@ -22,7 +22,7 @@ export default function Contact() {
 
     const phoneNumber = "+94753518586";
 
-    // WhatsApp සඳහා පණිවිඩය සකස් කිරීම
+    // WhatsApp 
     const message = `*New Inquiry from Website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Message:* ${formData.message}`;
 
     // WhatsApp Web හෝ App වෙත Redirect කිරීම
