@@ -1,14 +1,14 @@
 "use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   // Form එකේ දත්ත රඳවා තබා ගැනීමට State
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   // Input වෙනස් වන විට State අලුත් කිරීම
@@ -19,20 +19,22 @@ export default function Contact() {
   // WhatsApp හරහා පණිවිඩය යැවීම
   const handleWhatsAppSend = (e) => {
     e.preventDefault(); // Form එක submit වීම නතර කිරීම
-    
-    const phoneNumber = "+94771234855"; // ඔබේ WhatsApp අංකය (මෙය නිවැරදිදැයි තහවුරු කරගන්න)
-    
+
+    const phoneNumber = "+94753518586";
+
     // WhatsApp සඳහා පණිවිඩය සකස් කිරීම
     const message = `*New Inquiry from Website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Message:* ${formData.message}`;
-    
+
     // WhatsApp Web හෝ App වෙත Redirect කිරීම
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#111111] px-6 lg:px-20 border-t border-zinc-900/50">
-      
+    <section
+      id="contact"
+      className="py-24 bg-[#111111] px-6 lg:px-20 border-t border-zinc-900/50"
+    >
       {/* Title & Subtitle */}
       <div className="max-w-4xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
@@ -44,18 +46,26 @@ export default function Contact() {
       </div>
 
       <div className="max-w-4xl mx-auto space-y-8">
-        
         {/* Contact Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
           {/* Email Card */}
-          <motion.div 
+          <motion.div
             whileHover={{ y: -5 }}
             className="flex items-center space-x-6 bg-[#1a1a1a] p-8 rounded-2xl border border-zinc-800 hover:border-[#0BB671]/50 transition-colors"
           >
             <div className="w-14 h-14 bg-zinc-900 rounded-xl flex items-center justify-center flex-shrink-0">
-              <svg className="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <svg
+                className="w-6 h-6 text-gray-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
               </svg>
             </div>
             <div>
@@ -65,53 +75,57 @@ export default function Contact() {
           </motion.div>
 
           {/* WhatsApp Card */}
-          <motion.div 
+          <motion.div
             whileHover={{ y: -5 }}
             className="flex items-center space-x-6 bg-[#1a1a1a] p-8 rounded-2xl border border-zinc-800 hover:border-[#0BB671]/50 transition-colors"
           >
             <div className="w-14 h-14 bg-zinc-900 rounded-xl flex items-center justify-center flex-shrink-0">
-              {/* WhatsApp Icon */}
-              <svg className="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.031 0C5.385 0 0 5.388 0 12.035c0 2.124.553 4.195 1.603 6.01L.52 22l4.053-1.064c1.745.962 3.731 1.47 5.764 1.47 6.645 0 12.031-5.388 12.031-12.035S18.677 0 12.031 0zm.001 20.354c-1.782 0-3.528-.479-5.056-1.385l-.362-.214-2.99.785.798-2.915-.235-.374a9.923 9.923 0 01-1.517-5.334c0-5.496 4.475-9.972 9.971-9.972 5.497 0 9.971 4.476 9.971 9.972 0 5.496-4.474 9.972-9.971 9.972zm5.474-7.483c-.3-.15-1.776-.877-2.052-.977-.275-.1-.475-.15-.675.15-.2.3-.776.977-.951 1.177-.175.2-.35.225-.65.075-1.282-.642-2.385-1.554-3.149-2.617-.212-.295-.023-.454.127-.603.136-.135.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.25-.6-.5-.525-.675-.525-.175 0-.375-.025-.575-.025-.2 0-.525.075-.8.375-.275.3-.1.05-1.05 1.5-.95 1.45.2 3.025 1.15 4.3 1.25 1.7 3.325 2.75 5.5 3.675 1.35.575 2.15.825 2.925 1.075.75.25 1.45.225 1.975.125.6-.1 1.776-.725 2.025-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+              <svg
+                className="w-7 h-7 text-gray-300"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.4 " />
               </svg>
             </div>
             <div>
               <h4 className="text-white font-bold text-lg mb-1">WhatsApp</h4>
+
               <p className="text-gray-400 text-sm">+94 75 351 8586</p>
             </div>
           </motion.div>
-
         </div>
 
         {/* Contact Form */}
         <div className="bg-[#1a1a1a] p-8 md:p-10 rounded-2xl border border-zinc-800">
           <form onSubmit={handleWhatsAppSend} className="space-y-6">
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name Field */}
               <div className="space-y-2">
                 <label className="text-white font-semibold text-sm">Name</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="Your name" 
+                  placeholder="Your name"
                   className="w-full bg-[#111111] border border-zinc-800 focus:border-[#0BB671] rounded-xl p-4 text-white outline-none transition-colors"
                 />
               </div>
 
               {/* Email Field */}
               <div className="space-y-2">
-                <label className="text-white font-semibold text-sm">Email</label>
-                <input 
+                <label className="text-white font-semibold text-sm">
+                  Email
+                </label>
+                <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="Your email" 
+                  placeholder="Your email"
                   className="w-full bg-[#111111] border border-zinc-800 focus:border-[#0BB671] rounded-xl p-4 text-white outline-none transition-colors"
                 />
               </div>
@@ -119,32 +133,32 @@ export default function Contact() {
 
             {/* Message Field */}
             <div className="space-y-2">
-              <label className="text-white font-semibold text-sm">Message</label>
-              <textarea 
+              <label className="text-white font-semibold text-sm">
+                Message
+              </label>
+              <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 required
-                placeholder="Tell us about your project" 
+                placeholder="Tell us about your project"
                 rows={6}
                 className="w-full bg-[#111111] border border-zinc-800 focus:border-[#0BB671] rounded-xl p-4 text-white outline-none transition-colors resize-none"
               ></textarea>
             </div>
 
-            {/* Submit Button */}
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className="w-full flex items-center justify-center space-x-2 bg-[#0BB671] text-black font-bold text-lg py-4 rounded-xl hover:bg-[#16d98a] transition-colors"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+              {/* Clear WhatsApp Icon */}
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
               </svg>
-              <span>Send Message</span>
+              <span>Send via WhatsApp</span>
             </button>
-            
           </form>
         </div>
-
       </div>
     </section>
   );
