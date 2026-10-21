@@ -41,7 +41,7 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold text-white mb-6 leading-[1.1] tracking-tight"
           >
-            Your Brand. My Lens.<br />
+            Your Brand. My Lens<br />
            Viral Stories
           </motion.h1>
 
