@@ -17,8 +17,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#111111] overflow-hidden text-gray-300">
       
-      <Navbar />
-      
+<Navbar/>
 
       <Hero /> 
       <AboutMe />

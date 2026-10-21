@@ -12,7 +12,7 @@ export default function Navbar() {
       
       {/* Logo - Mobile වලදී කුඩා කර එක පේළියට ගෙන ඇත */}
       <div className="text-xl md:text-2xl font-bold text-white tracking-wider z-50 whitespace-nowrap">
-        GAYAN <span className="text-[#0BB671]">KANCHANA</span>
+        GAYA <span className="text-[#0BB671]">WALKER</span>
       </div>
 
       {/* Desktop Menu */}

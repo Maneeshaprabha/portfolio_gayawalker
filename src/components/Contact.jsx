@@ -77,7 +77,7 @@ export default function Contact() {
             </div>
             <div>
               <h4 className="text-white font-bold text-lg mb-1">WhatsApp</h4>
-              <p className="text-gray-400 text-sm">+94 77 123 4855</p>
+              <p className="text-gray-400 text-sm">+94 75 351 8586</p>
             </div>
           </motion.div>
 
