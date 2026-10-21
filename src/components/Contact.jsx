@@ -70,7 +70,7 @@ export default function Contact() {
             </div>
             <div>
               <h4 className="text-white font-bold text-lg mb-1">Email Us</h4>
-              <p className="text-gray-400 text-sm">gayawalker@gmail.com</p>
+              <p className="text-gray-400 text-sm">filmsbygaya@gmail.com</p>
             </div>
           </motion.div>
 
