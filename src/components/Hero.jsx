@@ -4,6 +4,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
+  
+  // නිශ්චිත Section ID එකකට Smooth Scroll කිරීම සඳහා Function එක
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative w-full h-[100svh] min-h-[600px] flex items-center bg-[#0a0a0a] overflow-hidden">
       
@@ -14,7 +23,7 @@ export default function Hero() {
           alt="Gaya Walker Background" 
           className="w-full h-full object-cover object-center"
         />
-        {/* Gradient Overlay - වම් පස අඳුරු කර දකුණු පසට විනිවිද පෙනෙන සේ සකසා ඇත */}
+        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 md:via-[#0a0a0a]/60 to-transparent"></div>
         {/* Mobile සඳහා පහළින් අමතර අඳුරක් */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent md:hidden"></div>
@@ -42,7 +51,7 @@ export default function Hero() {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold text-white mb-6 leading-[1.1] tracking-tight"
           >
             Your Brand. My Lens<br />
-           Viral Stories
+            Viral Stories
           </motion.h1>
 
           {/* Sub-headline / Description */}
@@ -52,23 +61,34 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             className="text-gray-300 text-base md:text-lg lg:text-xl mb-10 max-w-lg leading-relaxed"
           >
-           Seamlessly blending your promotions into cinematic travel reels that capture attention and inspire action.
+            Seamlessly blending your promotions into cinematic travel reels that capture attention and inspire action.
           </motion.p>
 
-          {/* Call to Action Button */}
+          {/* Call to Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
           >
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 md:pt-4">
-            <button className="px-6 md:px-8 py-3.5 bg-[#0BB671] text-black font-bold rounded-lg hover:bg-[#16d98a] transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_20px_rgba(11,182,113,0.25)]">
-              Work with Me
-            </button>
-            <button className="px-6 md:px-8 py-3.5 bg-transparent border border-zinc-700 text-white font-semibold rounded-lg hover:border-[#0BB671] hover:text-[#0BB671] transition-all duration-300">
-              View Portfolio
-            </button>
-          </div>
+              
+              {/* Work with Me -> Packages Section */}
+              <button 
+                onClick={() => scrollToSection('Packages')} // Pricing අංශයේ id එක 'Packages' ලෙස සිතා ඇත
+                className="px-6 md:px-8 py-3.5 bg-[#0BB671] text-black font-bold rounded-lg hover:bg-[#16d98a] transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_20px_rgba(11,182,113,0.25)]"
+              >
+                Work with Me
+              </button>
+              
+              {/* View Portfolio -> VideoGrid Section */}
+              <button 
+                onClick={() => scrollToSection('portfolio')} // VideoGrid අංශයේ id එක 'portfolio' ලෙස ලබා දෙන්න
+                className="px-6 md:px-8 py-3.5 bg-transparent border border-zinc-700 text-white font-semibold rounded-lg hover:border-[#0BB671] hover:text-[#0BB671] transition-all duration-300"
+              >
+                View Portfolio
+              </button>
+
+            </div>
           </motion.div>
 
           {/* Divider & Reviews Section */}
@@ -87,10 +107,6 @@ export default function Hero() {
               ))}
             </div>
             
-            
-            {/* <span className="text-gray-300 text-sm md:text-base font-medium">
-              4.9 from 100+ happy clients
-            </span> */}
           </motion.div>
 
         </div>

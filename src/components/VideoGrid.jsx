@@ -72,7 +72,6 @@ const allWorks = [
     link: "https://www.facebook.com/share/v/1d8eAzq3g1/?mibextid=wwXIfr",
   }
 ];
-
 export default function VideoGrid() {
   const [activeTab, setActiveTab] = useState('YouTube');
   const [isHovered, setIsHovered] = useState(false);
@@ -112,7 +111,8 @@ export default function VideoGrid() {
   };
 
   return (
-    <section className="py-24 bg-[#111111] flex flex-col items-center overflow-hidden relative">
+    // මෙහි id="portfolio" යන්න එකතු කර ඇත
+    <section id="portfolio" className="py-24 bg-[#111111] flex flex-col items-center overflow-hidden relative scroll-mt-24">
       
       {/* Title & Subtitle */}
       <div className="text-center mb-12 px-6 relative z-10">
